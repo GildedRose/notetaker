@@ -11,6 +11,7 @@ class Storage{
     }
 
     write(note) {
+        console.log(note)
         return writeFileAsync("db/db.json", JSON.stringify(note));
     }
 
@@ -24,11 +25,13 @@ class Storage{
                 } catch (err) {
                     parsedNotes = [];
                 }
+                console.log("getNotes" + parsedNotes)
                 return parsedNotes;
             });
     
     }
-    addNotes() {
+    addNotes(note) {
+       
         const { title, text } = note;
     
         if (!title || !text) {
@@ -36,11 +39,12 @@ class Storage{
         }
     
         const newNote = { title, text, id: uuidv4() };
-    
+   
+
         return this.getNotes() 
-            .then(notes => {
+            .then(notes => 
                 [...notes, newNote]
-            })
+            )
             .then(updatedNotes => this.write(updatedNotes))
             .then(() => { newNote });
     }
