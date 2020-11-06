@@ -11,4 +11,6 @@ Users need to install the dependencies listed in the package.json first before u
 After installation, users can navigate to the homepage and click the "Get Started" button to initiate Note Taker. From there, they will be able to enter a note's title and body text through the input sections and click upon the save icon to store it. Note titles will appear on the side bar for review and, in future versions, deletion through the trash icon.
 
 ![notetakerdemoshot](Demoshots/Notetaker.JPG)
-
+![notetakerdemoshot](Demoshots/Notetaker2.JPG)
+![notetakerdemoshot](Demoshots/Notetaker3.JPG)
+![notetakerdemoshot](Demoshots/Notetaker4.JPG)
