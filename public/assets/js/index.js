@@ -47,7 +47,9 @@ var handleNoteSave = function() {
   };
 
   saveNote(newNote).then(function(data) {
+    console.log("before render")
     getAndRenderNotes();
+    console.log("after render")
     renderActiveNote();
   });
 };
@@ -75,6 +77,7 @@ var handleRenderSaveBtn = function() {
 
 // Render the list of note titles
 var renderNoteList = function(notes) {
+  console.log(notes)
   $noteList.empty();
 
   var noteListItems = [];
@@ -96,6 +99,7 @@ var renderNoteList = function(notes) {
 };
 
 var getAndRenderNotes = function() {
+  console.log("in getAndRenderNotes")
   return getNotes().then(function(data) {
     renderNoteList(data);
   });
